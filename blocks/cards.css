@@ -1,29 +1,19 @@
 .cards {
-  background-color: #fcf5e5;
-  display: flex;
-  justify-content: center; /* centers the grid horizontally */
-  width: 100%;
+  padding-top: 20px;
 }
 
 .cards__list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0 auto; /* centers within .cards */
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 413px);
+  justify-content: center;
   gap: 40px 20px;
-  justify-items: center; /* centers each card inside its cell */
-  max-width: 1280px; /* keeps grid from stretching too wide */
 }
 
-@media screen and (max-width: 900px) {
-  .cards__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .cards__list {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 627px) {
+  .card__list {
+    grid-template-columns: repeat(auto-fit, 288px);
   }
 }
